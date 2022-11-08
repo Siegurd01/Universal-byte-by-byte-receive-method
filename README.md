@@ -15,3 +15,17 @@ Because of the fast processing, library methods can be called during interrupts 
 
 The library is applicable not only to physical interfaces (UART, RS485, RS232, SPI, I2C etc) but also to TCP and UDP protocols.
 Yes, network protocols are protected with checksums and acknowledged reception (depending on socket settings), but this does not apply to the entire message, but to its parts - packets. For example, if you want to send a message with a length of 10 kilobytes using a 2-3-4-5G modem, at a certain point in the transmission process, some packets of the message may not reach the server due to signal lost or device reboot. TCP guarantees that the packets that reach the server are intact, but the integrity of all 10k massage - is your problem.
+
+# Library features:
+ - Byte by byte receive (non-blocking);
+ - Dynamic message length;
+ - CRC32 support;
+ - Recognition of different devices on the same communication line;
+ - Functioning in a continuous data stream without pauses and delays.
+ 
+# Library Disadvantages:
+ - You need to configure the library to work with each type of messages/addresses/devices/lines separately.
+ 
+# TODO:
+ - Support of linear error-correcting Hamming codes;
+ - Encryption Support (e.g. AES128 or AES256).
