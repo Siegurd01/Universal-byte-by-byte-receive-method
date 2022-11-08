@@ -28,4 +28,4 @@ Yes, network protocols are protected with checksums and acknowledged reception (
  
 # TODO:
  - Support of linear error-correcting Hamming codes;
- - Encryption Support (e.g. AES128 or AES256).
+ - Encryption support (e.g. AES128 or AES256).
