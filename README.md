@@ -16,6 +16,9 @@ Because of the fast processing, library methods can be called during interrupts 
 The library is applicable not only to physical interfaces (UART, RS485, RS232, SPI, I2C etc) but also to TCP and UDP protocols.
 Yes, network protocols are protected with checksums and acknowledged reception (depending on socket settings), but this does not apply to the entire message, but to its parts - packets. For example, if you want to send a message with a length of 10 kilobytes using a 2-3-4-5G modem, at a certain point in the transmission process, some packets of the message may not reach the server due to signal lost or device reboot. TCP guarantees that the packets that reach the server are intact, but the integrity of all 10k massage - is your problem.
 
+# Message structure description
+ ![image](https://user-images.githubusercontent.com/75634636/200644170-f09ac14c-faa3-4cf7-8b49-f5f369e7e993.png)
+
 # Library features:
  - Byte by byte receive (non-blocking);
  - Dynamic message length;
@@ -29,3 +32,4 @@ Yes, network protocols are protected with checksums and acknowledged reception (
 # TODO:
  - Support of linear error-correcting Hamming codes;
  - Encryption support (e.g. AES128 or AES256).
+
