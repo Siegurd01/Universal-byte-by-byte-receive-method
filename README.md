@@ -21,7 +21,7 @@ Yes, network protocols are protected with checksums and acknowledged reception (
 
 # Library features:
  - Byte by byte receive (non-blocking);
- - Dynamic message length;
+ - Dynamic message (data section) length;
  - CRC32 support;
  - Recognition of different devices on the same communication line;
  - Functioning in a continuous data stream without pauses and delays.
